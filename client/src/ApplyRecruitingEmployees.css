@@ -1,0 +1,396 @@
+/* ----------------------------------------- */
+/* 🌟 Main Container */
+/* ----------------------------------------- */
+.ApplyRecruitingEmployees-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* ----------------------------------------- */
+  /* 📌 Sidebar (Left Menu) */
+  /* ----------------------------------------- */
+  .ApplyRecruitingEmployees-sidebar {
+    width: 250px;
+    background-color: #E3F2FD !important;
+    color: #000000;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a0a0a0 #E3F2FD;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar::-webkit-scrollbar-track {
+    background: #E3F2FD;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 3px;
+  }
+  
+  .ApplyRecruitingEmployees-logo {
+    height: 50px;
+    margin-bottom: 15px;
+    background: url("./assets/logo.png") no-repeat center center/contain;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000000 !important;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-menu li {
+    padding: 12px 0;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-menu li a {
+    color: #000000 !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-menu li a:hover {
+    background-color: #E0E0E0 !important;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .ApplyRecruitingEmployees-sidebar-subheader {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: 15px 0 10px 0;
+    padding-left: 12px;
+    text-align: left;
+  }
+  
+  /* ----------------------------------------- */
+  /* 🔐 Logout Button */
+  /* ----------------------------------------- */
+  .ApplyRecruitingEmployees-logout-container {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #D3D3D3;
+  }
+  
+  .ApplyRecruitingEmployees-logout-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ApplyRecruitingEmployees-logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+  }
+  
+  /* ----------------------------------------- */
+  /* 📄 Main Content */
+  /* ----------------------------------------- */
+  .ApplyRecruitingEmployees-main-content {
+    flex: 1;
+    padding: 40px 30px; /* เพิ่ม padding เพื่อให้ดูโปร่ง */
+    background: #f5f7fa; /* เปลี่ยนเป็นสีเทาอ่อนเรียบ */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 30px; /* เพิ่มช่องว่างระหว่างองค์ประกอบ */
+  }
+  
+  .ApplyRecruitingEmployees-main-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .ApplyRecruitingEmployees-main-content::-webkit-scrollbar-track {
+    background: #f5f7fa; /* ปรับสี scrollbar track ให้เข้ากับพื้นหลัง */
+  }
+  
+  .ApplyRecruitingEmployees-main-content::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 4px;
+  }
+  
+  /* Header Section */
+  .ApplyRecruitingEmployees-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 0; /* ลบ margin-bottom เพราะใช้ gap ใน main-content */
+    position: relative;
+    background: #ffffff;
+    padding: 20px 25px; /* เพิ่ม padding */
+    border-radius: 16px; /* เพิ่มความโค้งมน */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูมีมิติ */
+    border: 1px solid #e2e8f0;
+  }
+  
+  .ApplyRecruitingEmployees-back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1e3a8a;
+    margin-right: 15px;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .ApplyRecruitingEmployees-back-button:hover {
+    color: #1e40af;
+    transform: translateX(-3px);
+  }
+  
+  .ApplyRecruitingEmployees-header-title {
+    font-size: 26px; /* เพิ่มขนาดตัวอักษร */
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .ApplyRecruitingEmployees-header-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 2px;
+  }
+  
+  /* Form Container */
+  .ApplyRecruitingEmployees-form-container {
+    background: #ffffff;
+    padding: 40px; /* เพิ่ม padding */
+    border-radius: 20px; /* เพิ่มความโค้งมน */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* เพิ่มเงาให้ดูมีมิติ */
+    width: 100%;
+    max-width: 700px; /* เพิ่มความกว้าง */
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; /* ลบ margin-bottom เพราะใช้ gap ใน main-content */
+  }
+  
+  .ApplyRecruitingEmployees-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  }
+  
+  /* Form Group */
+  .ApplyRecruitingEmployees-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* เพิ่มช่องว่างระหว่างฟอร์ม */
+    gap: 20px; /* เพิ่มช่องว่างระหว่าง label และ input */
+  }
+  
+  .ApplyRecruitingEmployees-form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    flex: 1;
+  }
+  
+  .ApplyRecruitingEmployees-file-input {
+    display: none; /* ซ่อน input file จริง */
+  }
+  
+  .ApplyRecruitingEmployees-file-button {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%); /* เปลี่ยนสีปุ่มให้ดูทันสมัย */
+    color: white;
+    padding: 12px 24px; /* เพิ่ม padding */
+    border-radius: 25px; /* เพิ่มความโค้งมน */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; /* เพิ่ม transition ให้ดูนุ่มนวล */
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* เพิ่มเงา */
+  }
+  
+  .ApplyRecruitingEmployees-file-button:hover {
+    background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%); /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-2px); /* เพิ่มการเคลื่อนไหว */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ApplyRecruitingEmployees-file-name {
+    font-size: 14px;
+    color: #64748b;
+    margin-left: 10px;
+    flex: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Submit Button */
+  .ApplyRecruitingEmployees-submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* เพิ่มช่องว่างด้านบน */
+  }
+  
+  .ApplyRecruitingEmployees-submit-button {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%); /* เปลี่ยนสีปุ่มให้ดูทันสมัย */
+    color: white;
+    padding: 14px 40px; /* เพิ่ม padding */
+    border: none;
+    border-radius: 25px; /* เพิ่มความโค้งมน */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; /* เพิ่ม transition ให้ดูนุ่มนวล */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เพิ่มเงา */
+  }
+  
+  .ApplyRecruitingEmployees-submit-button:hover {
+    background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%); /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-2px); /* เพิ่มการเคลื่อนไหว */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ApplyRecruitingEmployees-sidebar {
+      width: 160px;
+      padding: 8px;
+    }
+  
+    .ApplyRecruitingEmployees-main-content {
+      padding: 30px 20px; /* ปรับ padding สำหรับหน้าจอเล็ก */
+    }
+  
+    .ApplyRecruitingEmployees-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+  
+    .ApplyRecruitingEmployees-header-title {
+      font-size: 22px; /* ปรับขนาดตัวอักษร */
+      text-align: left;
+    }
+  
+    .ApplyRecruitingEmployees-back-button {
+      margin-bottom: 8px;
+    }
+  
+    .ApplyRecruitingEmployees-form-container {
+      padding: 30px;
+      max-width: 100%;
+    }
+  
+    .ApplyRecruitingEmployees-form-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .ApplyRecruitingEmployees-form-label {
+      font-size: 14px;
+    }
+  
+    .ApplyRecruitingEmployees-file-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .ApplyRecruitingEmployees-file-name {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .ApplyRecruitingEmployees-submit-button {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ApplyRecruitingEmployees-main-content {
+      padding: 20px 15px; /* ปรับ padding สำหรับหน้าจอเล็กมาก */
+    }
+  
+    .ApplyRecruitingEmployees-header-title {
+      font-size: 20px;
+    }
+  
+    .ApplyRecruitingEmployees-form-label {
+      font-size: 13px;
+    }
+  
+    .ApplyRecruitingEmployees-file-button {
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+  
+    .ApplyRecruitingEmployees-file-name {
+      font-size: 12px;
+    }
+  
+    .ApplyRecruitingEmployees-submit-button {
+      font-size: 14px;
+    }
+  }

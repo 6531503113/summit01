@@ -1,0 +1,385 @@
+/* ----------------------------------------- */
+/* 🌟 Main Container */
+/* ----------------------------------------- */
+.addannouncement-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* ----------------------------------------- */
+/* 📌 Sidebar (Left Menu) */
+/* ----------------------------------------- */
+.addannouncement-sidebar {
+  width: 250px;
+  background-color: #E3F2FD !important;
+  color: #000000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.addannouncement-logo {
+  height: 50px;
+  margin-bottom: 15px;
+  background: url("./assets/logo.png") no-repeat center center/contain;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addannouncement-sidebar h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.addannouncement-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.addannouncement-sidebar ul li {
+  padding: 12px 0;
+}
+
+.addannouncement-sidebar ul li a {
+  color: #000000 !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.addannouncement-sidebar ul li a:hover {
+  background-color: #E0E0E0 !important;
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.addannouncement-sidebar ul li a.active {
+  background-color: #34c759;
+  font-weight: 600;
+}
+
+.addannouncement-sidebar-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000 !important;
+  margin: 15px 0 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+/* ----------------------------------------- */
+/* 🔐 Logout Button */
+/* ----------------------------------------- */
+.addannouncement-logout-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #D3D3D3;
+}
+
+.addannouncement-logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.addannouncement-logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* ----------------------------------------- */
+/* 📄 Main Content */
+/* ----------------------------------------- */
+.addannouncement-main-content {
+  flex: 1;
+  padding: 40px; /* Matches RecruitingEmployees padding */
+  background-color: #f5f6fa; /* Keep original background color */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Matches Recruiting EdithEmployees */
+}
+
+/* Header Section */
+.addannouncement-header {
+  background: #ffffff; /* Matches RecruitingEmployees */
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px; /* Matches RecruitingEmployees */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Matches RecruitingEmployees */
+  width: 100%;
+  max-width: 1300px; /* Matches RecruitingEmployees */
+  text-align: center;
+  border: 1px solid #e8ecef; /* Matches RecruitingEmployees */
+}
+
+/* Header Title */
+.addannouncement-header-title {
+  font-size: 34px; /* Matches RecruitingEmployees */
+  font-weight: 800; /* Matches RecruitingEmployees */
+  color: #2c3e50; /* Keep original color */
+  margin: 0;
+  letter-spacing: 1px; /* Matches RecruitingEmployees */
+  text-transform: uppercase; /* Matches RecruitingEmployees */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Add decorative line under title */
+.addannouncement-header-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ff0000; /* Use original color instead of blue */
+  border-radius: 2px;
+}
+
+/* Category Tabs (Search Bar equivalent) */
+.addannouncement-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.addannouncement-category-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.addannouncement-category-tab {
+  background: #E3F2FD; /* Keep original color */
+  border: 1px solid #ddd;
+  padding: 12px 20px; /* Matches search input padding */
+  border-radius: 30px; /* Matches RecruitingEmployees */
+  cursor: pointer;
+  font-size: 16px; /* Matches RecruitingEmployees */
+  font-weight: 500;
+  color: #333; /* Keep original color */
+  transition: all 0.3s ease-in-out; /* Matches RecruitingEmployees */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Matches RecruitingEmployees */
+}
+
+.addannouncement-category-tab.active {
+  background: #ff0000; /* Keep original color */
+  border-color: #ff0000;
+  color: #FFFFFF;
+}
+
+.addannouncement-category-tab:hover {
+  background: #cc0000; /* Keep original hover color */
+  box-shadow: 0 0 12px rgba(204, 0, 0, 0.2); /* Matches RecruitingEmployees focus shadow */
+  transform: scale(1.02); /* Matches RecruitingEmployees focus scale */
+}
+
+/* Job Listings */
+.addannouncement-job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Matches RecruitingEmployees */
+  gap: 30px; /* Matches RecruitingEmployees */
+  width: 100%;
+  max-width: 1300px;
+  padding: 0;
+  list-style: none;
+}
+
+.addannouncement-job-item {
+  background: #d9d9d9; /* Keep original color */
+  padding: 30px; /* Matches RecruitingEmployees */
+  border-radius: 15px; /* Matches RecruitingEmployees */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06); /* Matches RecruitingEmployees */
+  transition: all 0.3s ease-in-out; /* Matches RecruitingEmployees */
+  cursor: pointer;
+  border: 1px solid #e8ecef; /* Matches RecruitingEmployees */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add border decoration on hover */
+.addannouncement-job-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%); /* Use original colors */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Matches RecruitingEmployees */
+}
+
+.addannouncement-job-item:hover::before {
+  opacity: 1;
+}
+
+.addannouncement-job-item:hover {
+  transform: translateY(-5px); /* Matches RecruitingEmployees */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Matches RecruitingEmployees */
+}
+
+/* Job Title */
+.addannouncement-job-item h3 {
+  font-size: 24px; /* Matches RecruitingEmployees */
+  font-weight: 700;
+  color: #333; /* Keep original color */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8ecef; /* Matches RecruitingEmployees */
+  padding-bottom: 10px;
+  position: relative;
+}
+
+/* Add decorative line under job title */
+.addannouncement-job-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #cc0000; /* Use original color */
+  transition: width 0.3s ease-in-out; /* Matches RecruitingEmployees */
+}
+
+.addannouncement-job-item:hover h3::after {
+  width: 100%; /* Matches RecruitingEmployees */
+}
+
+/* Job Details */
+.addannouncement-job-details p {
+  font-size: 16px; /* Matches RecruitingEmployees */
+  color: #333; /* Keep original color */
+  margin: 10px 0;
+  line-height: 1.6; /* Matches RecruitingEmployees */
+  font-weight: 400;
+}
+
+.addannouncement-job-details strong {
+  color: #333; /* Keep original color */
+  font-weight: 600; /* Matches RecruitingEmployees */
+}
+
+/* Job Actions (Buttons) */
+.addannouncement-job-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px; /* Matches RecruitingEmployees button margin */
+}
+
+.addannouncement-edit-button,
+.addannouncement-delete-button {
+  background: #ff0000; /* Keep original color */
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 25px; /* Matches RecruitingEmployees button padding */
+  border-radius: 30px; /* Matches RecruitingEmployees */
+  cursor: pointer;
+  font-size: 16px; /* Matches RecruitingEmployees */
+  font-weight: 600; /* Matches RecruitingEmployees */
+  transition: all 0.3s ease-in-out; /* Matches RecruitingEmployees */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Matches RecruitingEmployees */
+}
+
+.addannouncement-edit-button:hover,
+.addannouncement-delete-button:hover {
+  background: #cc0000; /* Keep original hover color */
+  transform: translateY(-2px); /* Matches RecruitingEmployees */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Matches RecruitingEmployees */
+}
+
+/* Add Button */
+.addannouncement-add-button {
+  background-color: #ff0000; /* Keep original color */
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Matches RecruitingEmployees button padding */
+  border-radius: 30px; /* Matches RecruitingEmployees */
+  cursor: pointer;
+  font-size: 16px; /* Matches RecruitingEmployees */
+  font-weight: 600; /* Matches RecruitingEmployees */
+  transition: all 0.3s ease-in-out; /* Matches RecruitingEmployees */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Matches RecruitingEmployees */
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.addannouncement-add-button:hover {
+  background-color: #cc0000; /* Keep original hover color */
+  transform: translateY(-2px); /* Matches RecruitingEmployees */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Matches RecruitingEmployees */
+}
+
+/* No Announcement Message */
+.addannouncement-no-announcement {
+  font-size: 18px;
+  color: #666; /* Keep original color */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .addannouncement-main-content {
+    padding: 25px; /* Matches RecruitingEmployees */
+  }
+
+  .addannouncement-header {
+    padding: 15px 20px; /* Matches RecruitingEmployees */
+  }
+
+  .addannouncement-header-title {
+    font-size: 28px; /* Matches RecruitingEmployees */
+  }
+
+  .addannouncement-category-tabs {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .addannouncement-job-list {
+    grid-template-columns: 1fr; /* Matches RecruitingEmployees */
+  }
+
+  .addannouncement-job-item {
+    padding: 20px; /* Matches RecruitingEmployees */
+  }
+
+  .addannouncement-add-button {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

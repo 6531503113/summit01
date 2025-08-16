@@ -1,0 +1,9 @@
+.recruitment-container { display: flex; }
+.sidebar { width: 250px; background: #f4f4f4; padding: 20px; }
+.main-content { flex: 1; padding: 20px; }
+.personal-info-card { border: 1px solid #ccc; padding: 20px; }
+.header-container { text-align: right; margin-bottom: 20px; }
+.edit-button { background: #ffc107; color: black; padding: 5px 10px; border: none; }
+.info-section { margin-bottom: 20px; }
+.info-section-title { margin-bottom: 10px; }
+.officer-button { background: #17a2b8; color: white; padding: 10px 20px; border: none; }

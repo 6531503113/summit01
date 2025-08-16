@@ -1,0 +1,136 @@
+.signup-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.signup-form {
+    flex: 1;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.signup-image {
+    flex: 1;
+    order: 1;
+    width: 50%;
+    background: url('./assets/work1.png') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    background: url('./assets/logo.png')no-repeat center center/contain;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 20px;  
+    left: 20px; 
+    margin: 0;
+    z-index: 2;
+}
+
+.signup-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 139, 0.5);
+}
+
+.password-container {
+    display: flex;
+    gap: 1rem; 
+    width: 100%;
+}
+
+.password-field {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.name-container {
+    display: flex;
+    gap: 1rem; 
+    width: 100%;
+}
+
+.name-field {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form h2 {
+    color: #253D90;
+    margin-left: 50px; 
+    text-align: center; 
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.signup-form p {
+    color: #7F8C8D;
+    margin-left: 53px;  
+    text-align: center; 
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; 
+}
+
+/* สไตล์ช่องกรอกข้อมูล */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* ข้อความแจ้งเตือน */
+.error-text {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* ส่วนของ Email และส่วนล่าง */
+.email-section {
+    width: 100%;
+    transition: margin-top 0.3s ease; /* ความนุ่มนวลในการขยับ */
+}
+
+.email-section.with-phone-error {
+    margin-top: 20px; /* ขยับลงเมื่อมี phone error */
+}
+
+/* Create an account */
+.create-account {
+    color: #253D90;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ปุ่ม Register */
+.signin-btn {
+    width: 100%;
+    background: #253D90;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.signin-btn:hover {
+    background: #16243d;
+}

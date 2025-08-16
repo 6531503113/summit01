@@ -1,0 +1,455 @@
+/* ----------------------------------------- */
+/* 🌟 Main Container */
+/* ----------------------------------------- */
+.ScoreApplicantStatus-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* ----------------------------------------- */
+  /* 📌 Sidebar (Left Menu) */
+  /* ----------------------------------------- */
+  .ScoreApplicantStatus-sidebar {
+    width: 250px;
+    background-color: #E3F2FD !important;
+    color: #000000;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a0a0a0 #E3F2FD;
+  }
+  
+  .ScoreApplicantStatus-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .ScoreApplicantStatus-sidebar::-webkit-scrollbar-track {
+    background: #E3F2FD;
+  }
+  
+  .ScoreApplicantStatus-sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 3px;
+  }
+  
+  .ScoreApplicantStatus-logo {
+    height: 50px;
+    margin-bottom: 15px;
+    background: url("./assets/logo.png") no-repeat center center/contain;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ScoreApplicantStatus-sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000000 !important;
+  }
+  
+  .ScoreApplicantStatus-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+  }
+  
+  .ScoreApplicantStatus-sidebar-menu li {
+    padding: 12px 0;
+  }
+  
+  .ScoreApplicantStatus-sidebar-menu li a {
+    color: #000000 !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .ScoreApplicantStatus-sidebar-menu li a:hover {
+    background-color: #E0E0E0 !important;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  
+  .ScoreApplicantStatus-sidebar-subheader {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: 15px 0 10px 0;
+    padding-left: 12px;
+    text-align: left;
+  }
+  
+  /* ----------------------------------------- */
+  /* 🔐 Logout Button */
+  /* ----------------------------------------- */
+  .ScoreApplicantStatus-logout-container {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #D3D3D3;
+  }
+  
+  .ScoreApplicantStatus-logout-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ScoreApplicantStatus-logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+  }
+  
+  /* ----------------------------------------- */
+  /* 📄 Main Content */
+  /* ----------------------------------------- */
+  .ScoreApplicantStatus-main-content {
+    flex: 1;
+    padding: 40px 30px;
+    background: linear-gradient(180deg, #f5f7fa 0%, #e9ecef 100%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .ScoreApplicantStatus-main-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .ScoreApplicantStatus-main-content::-webkit-scrollbar-track {
+    background: #f5f7fa;
+  }
+  
+  .ScoreApplicantStatus-main-content::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 4px;
+  }
+  
+  /* Header Section */
+  .ScoreApplicantStatus-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 0;
+    position: relative;
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .ScoreApplicantStatus-header-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .ScoreApplicantStatus-header-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 2px;
+  }
+  
+  /* Table Container */
+  .ScoreApplicantStatus-table-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  
+  .ScoreApplicantStatus-table-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  }
+  
+  /* Table Styling */
+  .ScoreApplicantStatus-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #2c3e50;
+  }
+  
+  .ScoreApplicantStatus-table thead {
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .ScoreApplicantStatus-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .ScoreApplicantStatus-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .ScoreApplicantStatus-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+  
+  .ScoreApplicantStatus-table td {
+    padding: 15px 20px;
+    font-weight: 500;
+  }
+  
+  .ScoreApplicantStatus-score-button {
+    background: #e2e8f0;
+    color: #2c3e50;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ScoreApplicantStatus-score-button:disabled {
+    background: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  /* Modal Overlay */
+  .ScoreApplicantStatus-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .ScoreApplicantStatus-modal {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    border: 1px solid #000000;
+  }
+  
+  .ScoreApplicantStatus-back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #2c3e50;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .ScoreApplicantStatus-back-button:hover {
+    color: #1e3a8a;
+  }
+  
+  .ScoreApplicantStatus-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .ScoreApplicantStatus-score-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #2c3e50;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .ScoreApplicantStatus-score-item.total {
+    font-weight: 700;
+    color: #1e3a8a;
+    border-bottom: none;
+    margin-top: 10px;
+  }
+  
+  .ScoreApplicantStatus-add-document-button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ScoreApplicantStatus-add-document-button:hover {
+    background: #1e40af;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ScoreApplicantStatus-sidebar {
+      width: 160px;
+      padding: 8px;
+    }
+  
+    .ScoreApplicantStatus-main-content {
+      padding: 30px 20px;
+    }
+  
+    .ScoreApplicantStatus-header {
+      padding: 15px 20px;
+    }
+  
+    .ScoreApplicantStatus-header-title {
+      font-size: 22px;
+    }
+  
+    .ScoreApplicantStatus-table-container {
+      padding: 20px;
+    }
+  
+    .ScoreApplicantStatus-table {
+      font-size: 13px;
+    }
+  
+    .ScoreApplicantStatus-table th,
+    .ScoreApplicantStatus-table td {
+      padding: 10px 15px;
+    }
+  
+    .ScoreApplicantStatus-score-button {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  
+    .ScoreApplicantStatus-modal {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .ScoreApplicantStatus-modal-title {
+      font-size: 18px;
+    }
+  
+    .ScoreApplicantStatus-score-item {
+      font-size: 14px;
+    }
+  
+    .ScoreApplicantStatus-add-document-button {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ScoreApplicantStatus-main-content {
+      padding: 20px 15px;
+    }
+  
+    .ScoreApplicantStatus-header-title {
+      font-size: 20px;
+    }
+  
+    .ScoreApplicantStatus-table {
+      font-size: 12px;
+    }
+  
+    .ScoreApplicantStatus-table th,
+    .ScoreApplicantStatus-table td {
+      padding: 8px 10px;
+    }
+  
+    .ScoreApplicantStatus-score-button {
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+  
+    .ScoreApplicantStatus-modal-title {
+      font-size: 16px;
+    }
+  
+    .ScoreApplicantStatus-score-item {
+      font-size: 13px;
+    }
+  
+    .ScoreApplicantStatus-add-document-button {
+      font-size: 11px;
+      padding: 6px 12px;
+    }
+  }

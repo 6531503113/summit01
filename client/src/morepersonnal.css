@@ -1,0 +1,279 @@
+/* โครงสร้างหลัก */
+.morepersonnal-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* Sidebar - เหมือน PersonnelInformation.css */
+.morepersonnal-sidebar {
+  width: 250px;
+  background-color: #E3F2FD !important;
+  color: #000000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.morepersonnal-logo {
+  height: 50px;
+  margin-bottom: 15px;
+  background: url("./assets/logo.png") no-repeat center center/contain;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.morepersonnal-sidebar-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.morepersonnal-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.morepersonnal-sidebar-menu li {
+  padding: 12px 0;
+}
+
+.morepersonnal-sidebar-link {
+  color: #000000 !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.morepersonnal-sidebar-link:hover {
+  background-color: #E0E0E0 !important;
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.morepersonnal-sidebar-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000 !important;
+  margin: 15px 0 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.morepersonnal-logout-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #D3D3D3;
+}
+
+.morepersonnal-logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.morepersonnal-logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Main Content */
+.morepersonnal-main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f7f8fa;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.morepersonnal-header {
+  background-color: transparent;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1000px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.morepersonnal-header-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Personal Info Card */
+.morepersonnal-personal-info-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.morepersonnal-info-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 20px;
+}
+
+.morepersonnal-info-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.morepersonnal-info-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #2c3e50;
+  padding-bottom: 8px;
+}
+
+.morepersonnal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.morepersonnal-info-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.5;
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+.morepersonnal-info-item strong {
+  margin-right: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.morepersonnal-info-item span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.morepersonnal-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.morepersonnal-officer-button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.morepersonnal-officer-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .morepersonnal-sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .morepersonnal-main-content {
+    padding: 25px;
+  }
+
+  .morepersonnal-header {
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  .morepersonnal-header-title {
+    font-size: 26px;
+  }
+
+  .morepersonnal-personal-info-card {
+    max-width: 100%;
+    padding: 25px;
+  }
+
+  .morepersonnal-info-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .morepersonnal-info-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .morepersonnal-info-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .morepersonnal-info-item {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .morepersonnal-button-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .morepersonnal-officer-button {
+    width: 100%;
+    padding: 12px;
+  }
+}

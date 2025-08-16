@@ -1,0 +1,330 @@
+/* ----------------------------------------- */
+/* 🌟 Main Structure */
+/* ----------------------------------------- */
+.morejobs-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* ----------------------------------------- */
+/* 📌 Sidebar */
+/* ----------------------------------------- */
+.morejobs-sidebar {
+  width: 250px;
+  background-color: #E3F2FD !important;
+  color: #000000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.morejobs-logo {
+  height: 50px;
+  margin-bottom: 15px;
+  background: url("./assets/logo.png") no-repeat center center/contain;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.morejobs-sidebar-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.morejobs-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.morejobs-sidebar-menu li {
+  padding: 12px 0;
+}
+
+.morejobs-sidebar-link {
+  color: #000000 !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.morejobs-sidebar-link:hover {
+  background-color: #E0E0E0 !important;
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.morejobs-sidebar-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000 !important;
+  margin: 15px 0 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+/* ----------------------------------------- */
+/* 🔐 Logout Button */
+/* ----------------------------------------- */
+.morejobs-logout-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #D3D3D3;
+}
+
+.morejobs-logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.morejobs-logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* ----------------------------------------- */
+/* 📄 Main Content (ปรับให้เป็นทางการมากขึ้น) */
+/* ----------------------------------------- */
+.morejobs-main-content {
+  flex: 1;
+  padding: 50px; /* เพิ่ม padding เพื่อให้ดูโปร่งขึ้น */
+  background-color: #f7f8fa;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* ทำให้ครอบคลุมความสูงทั้งหมด */
+}
+
+.morejobs-header {
+  background-color: #ffffff; /* เพิ่มพื้นหลังสีขาวเพื่อความเป็นทางการ */
+  padding: 25px 35px; /* เพิ่ม padding เพื่อให้ดูสมดุล */
+  margin-bottom: 40px; /* เพิ่มระยะห่างด้านล่าง */
+  width: 100%;
+  max-width: 1000px;
+  border-bottom: 3px solid #2c3e50; /* ขอบล่างหนาขึ้นเพื่อความเด่นชัด */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* เพิ่มเงาเล็กน้อย */
+  border-radius: 8px; /* เพิ่มมุมโค้งเพื่อความทันสมัย */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.morejobs-header-title {
+  font-size: 36px; /* เพิ่มขนาดฟอนต์ให้ดูเด่นชัด */
+  font-weight: 800; /* เพิ่มน้ำหนักตัวอักษร */
+  color: #2c3e50;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
+  position: relative;
+}
+
+/* เพิ่มเส้นตกแต่งใต้หัวข้อ */
+.morejobs-header-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #2c3e50;
+  border-radius: 2px;
+}
+
+.morejobs-applicant-info {
+  background: #ffffff;
+  padding: 50px; /* เพิ่ม padding เพื่อให้ดูโปร่งและเป็นทางการ */
+  border-radius: 10px; /* เพิ่มมุมโค้งให้ดูนุ่มนวล */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* เพิ่มเงาให้ลึกขึ้น */
+  border: 1px solid #d1d5db;
+  max-width: 900px; /* ปรับขนาดให้กว้างขึ้นเพื่อความสมดุล */
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.morejobs-applicant-header {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* เพิ่มระยะห่างเพื่อความสมดุล */
+  margin-bottom: 35px; /* เพิ่มระยะห่างด้านล่าง */
+  border-bottom: 2px solid #d1d5db; /* ขอบล่างหนาขึ้น */
+  padding-bottom: 20px; /* ปรับ padding ให้สมดุล */
+}
+
+.morejobs-applicant-header img {
+  width: 70px; /* เพิ่มขนาดรูปโปรไฟล์ */
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #d1d5db; /* ขอบหนาขึ้น */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้รูป */
+}
+
+.morejobs-applicant-header h3 {
+  font-size: 26px; /* เพิ่มขนาดฟอนต์ */
+  font-weight: 800; /* เพิ่มน้ำหนักตัวอักษร */
+  color: #2c3e50;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
+}
+
+.morejobs-applicant-header p {
+  font-size: 18px; /* เพิ่มขนาดฟอนต์ */
+  color: #7f8c8d;
+  margin: 0;
+  font-weight: 600; /* เพิ่มน้ำหนักตัวอักษร */
+}
+
+.morejobs-applicant-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
+  padding: 25px 0; /* ปรับ padding ให้สมดุล */
+}
+
+.morejobs-applicant-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+.morejobs-applicant-section h4 {
+  font-size: 18px; /* เพิ่มขนาดฟอนต์ */
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* เพิ่มระยะห่างตัวอักษร */
+  border-bottom: 2px solid #d1d5db; /* ขอบล่างหนาขึ้น */
+  padding-bottom: 8px; /* ปรับ padding ให้สมดุล */
+}
+
+.morejobs-applicant-section p {
+  font-size: 16px; /* เพิ่มขนาดฟอนต์ */
+  color: #2c3e50;
+  margin: 5px 0;
+  line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+  font-weight: 500; /* เพิ่มน้ำหนักตัวอักษร */
+}
+
+.morejobs-portfolio-button {
+  background: #253d90;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px; /* ปรับ padding ให้ดูสมดุลและเป็นทางการ */
+  border-radius: 6px; /* ปรับมุมโค้งให้ดูนุ่มนวล */
+  cursor: pointer;
+  font-size: 15px; /* ปรับขนาดฟอนต์ */
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* เพิ่ม transition ให้ดูนุ่มนวล */
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* เพิ่มระยะห่างตัวอักษร */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.morejobs-portfolio-button:hover {
+  background: #1e2f72;
+  transform: translateY(-2px); /* เพิ่มการยกขึ้นเมื่อ hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เพิ่มเงาเมื่อ hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .morejobs-sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .morejobs-main-content {
+    padding: 30px; /* ปรับ padding ให้เหมาะสมกับหน้าจอเล็ก */
+  }
+
+  .morejobs-header {
+    padding: 20px 25px; /* ปรับ padding */
+    margin-bottom: 25px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .morejobs-header-title {
+    font-size: 28px; /* ปรับขนาดฟอนต์ */
+    letter-spacing: 0.8px;
+  }
+
+  .morejobs-header-title::after {
+    width: 50px; /* ปรับขนาดเส้นตกแต่ง */
+    bottom: -8px;
+  }
+
+  .morejobs-applicant-info {
+    padding: 30px; /* ปรับ padding */
+    max-width: 100%; /* ทำให้เต็มความกว้างบนหน้าจอเล็ก */
+  }
+
+  .morejobs-applicant-details {
+    grid-template-columns: 1fr;
+    gap: 25px; /* ปรับระยะห่าง */
+  }
+
+  .morejobs-applicant-header {
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+
+  .morejobs-applicant-header img MOZ-P {
+    width: 60px;
+    height: 60px;
+  }
+
+  .morejobs-applicant-header h3 {
+    font-size: 22px; /* ปรับขนาดฟอนต์ */
+  }
+
+  .morejobs-applicant-header p {
+    font-size: 16px; /* ปรับขนาดฟอนต์ */
+  }
+
+  .morejobs-applicant-section h4 {
+    font-size: 16px; /* ปรับขนาดฟอนต์ */
+  }
+
+  .morejobs-applicant-section p {
+    font-size: 14px; /* ปรับขนาดฟอนต์ */
+  }
+
+  .morejobs-portfolio-button {
+    width: 100%;
+    padding: 10px 20px; /* ปรับ padding */
+  }
+}

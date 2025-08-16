@@ -1,0 +1,334 @@
+/* ----------------------------------------- */
+/* 🌟 Main Container */
+/* ----------------------------------------- */
+.RecruitingEmployees-container {
+    display: flex;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* ----------------------------------------- */
+  /* 📌 Sidebar (Left Menu) */
+  /* ----------------------------------------- */
+  .RecruitingEmployees-sidebar {
+    width: 250px;
+    background-color: #E3F2FD !important;
+    color: #000000;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  .RecruitingEmployees-logo {
+    height: 50px;
+    margin-bottom: 15px;
+    background: url("./assets/logo.png") no-repeat center center/contain;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .RecruitingEmployees-sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000000 !important;
+  }
+  
+  .RecruitingEmployees-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+  }
+  
+  .RecruitingEmployees-sidebar-menu li {
+    padding: 12px 0;
+  }
+  
+  .RecruitingEmployees-sidebar-menu li a {
+    color: #000000 !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .RecruitingEmployees-sidebar-menu li a:hover {
+    background-color: #E0E0E0 !important;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .RecruitingEmployees-sidebar-subheader {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: 15px 0 10px 0;
+    padding-left: 12px;
+    text-align: left;
+  }
+  
+  /* ----------------------------------------- */
+  /* 🔐 Logout Button */
+  /* ----------------------------------------- */
+  .RecruitingEmployees-logout-container {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #D3D3D3;
+  }
+  
+  .RecruitingEmployees-logout-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .RecruitingEmployees-logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+  }
+  
+  /* ----------------------------------------- */
+/* 📄 Main Content */
+/* ----------------------------------------- */
+.RecruitingEmployees-main-content {
+    flex: 1;
+    padding: 40px; /* เพิ่ม padding เพื่อให้ดูโปร่ง */
+    background: linear-gradient(180deg, #f9fbfc 0%, #f1f4f8 100%); /* Gradient พื้นหลังเพื่อความทันสมัย */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* ช่วยให้เนื้อหาเต็มหน้าจอ */
+  }
+  
+  /* Header Section */
+  .RecruitingEmployees-header {
+    background: #ffffff; /* พื้นหลังสีขาว */
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px; /* มุมโค้งมนมากขึ้น */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* เงาที่นุ่มนวล */
+    width: 100%;
+    max-width: 1300px; /* ขยายความกว้างสูงสุด */
+    text-align: center;
+    border: 1px solid #e8ecef; /* เส้นขอบบาง ๆ */
+  }
+  
+  /* Header Title */
+  .RecruitingEmployees-header-title {
+    font-size: 34px; /* เพิ่มขนาดตัวอักษรให้เด่น */
+    font-weight: 800; /* ตัวหนาขึ้น */
+    color: #1a3c5e; /* สีน้ำเงินเข้มเพื่อความน่าเชื่อถือ */
+    margin: 0;
+    letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
+    text-transform: uppercase; /* ตัวพิมพ์ใหญ่ทั้งหมด */
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  /* เพิ่มเส้นตกแต่งใต้ชื่อ */
+  .RecruitingEmployees-header-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #2b5a8c; /* สีน้ำเงินเข้ม */
+    border-radius: 2px;
+  }
+  
+  /* Search Bar */
+  .RecruitingEmployees-header-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1300px;
+  }
+  
+  .RecruitingEmployees-search-input {
+    padding: 12px 20px; /* เพิ่ม padding เพื่อให้ดูสบายตา */
+    font-size: 16px;
+    border: 1px solid #d1d9e0;
+    border-radius: 30px; /* มุมโค้งมนมากขึ้น */
+    width: 450px; /* ขยายความกว้าง */
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* เงาที่นุ่มนวล */
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .RecruitingEmployees-search-input:focus {
+    border-color: #2b5a8c; /* สีน้ำเงินเข้ม */
+    box-shadow: 0 0 12px rgba(43, 90, 140, 0.2);
+    transform: scale(1.02); /* ขยายเล็กน้อยเมื่อโฟกัส */
+  }
+  
+  /* Job Listings */
+  .RecruitingEmployees-job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* ปรับขนาดการ์ดให้ใหญ่ขึ้น */
+    gap: 30px; /* เพิ่มระยะห่างระหว่างการ์ด */
+    width: 100%;
+    max-width: 1300px;
+  }
+  
+  .RecruitingEmployees-job-item {
+    background: #ffffff; /* พื้นหลังสีขาว */
+    padding: 30px; /* เพิ่ม padding */
+    border-radius: 15px; /* มุมโค้งมนมากขึ้น */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06); /* เงาที่ลึกขึ้น */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #e8ecef;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* เพิ่มเส้นขอบสีเมื่อชี้เมาส์ */
+  .RecruitingEmployees-job-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2b5a8c 0%, #4682b4 100%); /* Gradient สีน้ำเงิน */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .RecruitingEmployees-job-item:hover::before {
+    opacity: 1;
+  }
+  
+  .RecruitingEmployees-job-item:hover {
+    transform: translateY(-5px); /* ยกการ์ดขึ้น */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* เงาที่เข้มขึ้น */
+  }
+  
+  /* Job Title */
+  .RecruitingEmployees-job-title {
+    font-size: 24px; /* เพิ่มขนาดตัวอักษร */
+    font-weight: 700;
+    color: #1a3c5e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e8ecef;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+  /* เพิ่มเส้นตกแต่งใต้ชื่อ */
+  .RecruitingEmployees-job-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #4682b4; /* สีน้ำเงินอ่อน */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .RecruitingEmployees-job-item:hover .RecruitingEmployees-job-title::after {
+    width: 100%; /* ขยายเส้นเมื่อชี้เมาส์ */
+  }
+  
+  /* Job Details */
+  .RecruitingEmployees-job-detail {
+    font-size: 16px; /* เพิ่มขนาดตัวอักษร */
+    color: #4a5b6d;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  .RecruitingEmployees-job-detail strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  /* Job Posted */
+  .RecruitingEmployees-job-posted {
+    font-size: 14px; /* เพิ่มขนาดตัวอักษรเล็กน้อย */
+    color: #8a9aa9;
+    margin-top: 20px;
+    font-style: italic;
+    text-align: right; /* จัดชิดขวา */
+  }
+  
+  /* See More Button */
+  .RecruitingEmployees-see-more-button {
+    background: linear-gradient(90deg, #2b5a8c 0%, #4682b4 100%); /* Gradient สีน้ำเงิน */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .RecruitingEmployees-see-more-button:hover {
+    background: linear-gradient(90deg, #234a75 0%, #3a6b9a 100%); /* Gradient เข้มขึ้น */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .RecruitingEmployees-main-content {
+      padding: 25px;
+    }
+  
+    .RecruitingEmployees-header {
+      padding: 15px 20px;
+    }
+  
+    .RecruitingEmployees-header-title {
+      font-size: 28px;
+    }
+  
+    .RecruitingEmployees-search-input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .RecruitingEmployees-job-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .RecruitingEmployees-job-item {
+      padding: 20px;
+    }
+  }

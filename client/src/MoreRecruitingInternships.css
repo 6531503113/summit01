@@ -1,0 +1,434 @@
+/* ----------------------------------------- */
+/* 🌟 Main Container */
+/* ----------------------------------------- */
+.MoreRecruitingInternships-container {
+    display: flex;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+  }
+  
+  /* ----------------------------------------- */
+  /* 📌 Sidebar (Left Menu) */
+  /* ----------------------------------------- */
+  .MoreRecruitingInternships-sidebar {
+    width: 250px;
+    background-color: #E3F2FD !important;
+    color: #000000;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  .MoreRecruitingInternships-sidebar {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a0a0a0 #E3F2FD;
+  }
+  
+  .MoreRecruitingInternships-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .MoreRecruitingInternships-sidebar::-webkit-scrollbar-track {
+    background: #E3F2FD;
+  }
+  
+  .MoreRecruitingInternships-sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 3px;
+  }
+  
+  .MoreRecruitingInternships-logo {
+    height: 50px;
+    margin-bottom: 15px;
+    background: url("./assets/logo.png") no-repeat center center/contain;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .MoreRecruitingInternships-sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000000 !important;
+  }
+  
+  .MoreRecruitingInternships-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+  }
+  
+  .MoreRecruitingInternships-sidebar-menu li {
+    padding: 12px 0;
+  }
+  
+  .MoreRecruitingInternships-sidebar-menu li a {
+    color: #000000 !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .MoreRecruitingInternships-sidebar-menu li a:hover {
+    background-color: #E0E0E0 !important;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .MoreRecruitingInternships-sidebar-subheader {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: 15px 0 10px 0;
+    padding-left: 12px;
+    text-align: left;
+  }
+  
+  /* ----------------------------------------- */
+  /* 🔐 Logout Button */
+  /* ----------------------------------------- */
+  .MoreRecruitingInternships-logout-container {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #D3D3D3;
+  }
+  
+  .MoreRecruitingInternships-logout-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MoreRecruitingInternships-logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+  }
+  
+  /* ----------------------------------------- */
+  /* 📄 Main Content */
+  /* ----------------------------------------- */
+  .MoreRecruitingInternships-main-content {
+    flex: 1;
+    padding: 30px 25px;
+    background: linear-gradient(180deg, #f5f7fa 0%, #e9ecef 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Header Section */
+  .MoreRecruitingInternships-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .MoreRecruitingInternships-back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1e3a8a;
+    margin-right: 10px;
+  }
+  
+  .MoreRecruitingInternships-back-button:hover {
+    color: #3b82f6;
+  }
+  
+  .MoreRecruitingInternships-header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .MoreRecruitingInternships-header-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 2px;
+  }
+  
+  /* Job Details Section */
+  .MoreRecruitingInternships-job-details {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow-y: auto;
+    max-height: 70vh;
+    margin-bottom: 30px;
+  }
+  
+  .MoreRecruitingInternships-job-details {
+    scrollbar-width: thin;
+    scrollbar-color: #a0a0a0 #ffffff;
+  }
+  
+  .MoreRecruitingInternships-job-details::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .MoreRecruitingInternships-job-details::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  .MoreRecruitingInternships-job-details::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 4px;
+  }
+  
+  /* Job Header (Title, Apply Button) */
+  .MoreRecruitingInternships-job-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .MoreRecruitingInternships-job-title-container {
+    flex: 1;
+  }
+  
+  .MoreRecruitingInternships-job-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 8px 0;
+    position: relative;
+  }
+  
+  .MoreRecruitingInternships-job-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .MoreRecruitingInternships-job-header:hover .MoreRecruitingInternships-job-title::after {
+    width: 100px;
+  }
+  
+  .MoreRecruitingInternships-job-deadline {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .MoreRecruitingInternships-apply-button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .MoreRecruitingInternships-apply-button:hover {
+    background: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Job Description, Feature, Additional Features */
+  .MoreRecruitingInternships-job-description,
+  .MoreRecruitingInternships-job-feature,
+  .MoreRecruitingInternships-job-additional {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background: #fafafa;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .MoreRecruitingInternships-job-description:hover,
+  .MoreRecruitingInternships-job-feature:hover,
+  .MoreRecruitingInternships-job-additional:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .MoreRecruitingInternships-job-description h3,
+  .MoreRecruitingInternships-job-feature h3,
+  .MoreRecruitingInternships-job-additional h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .MoreRecruitingInternships-job-description h3::after,
+  .MoreRecruitingInternships-job-feature h3::after,
+  .MoreRecruitingInternships-job-additional h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .MoreRecruitingInternships-job-description:hover h3::after,
+  .MoreRecruitingInternships-job-feature:hover h3::after,
+  .MoreRecruitingInternships-job-additional:hover h3::after {
+    width: 80px;
+  }
+  
+  .MoreRecruitingInternships-job-description ul,
+  .MoreRecruitingInternships-job-feature ul,
+  .MoreRecruitingInternships-job-additional ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin: 0;
+  }
+  
+  .MoreRecruitingInternships-job-description ul li,
+  .MoreRecruitingInternships-job-feature ul li,
+  .MoreRecruitingInternships-job-additional ul li {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .MoreRecruitingInternships-sidebar {
+      width: 160px;
+      padding: 8px;
+    }
+  
+    .MoreRecruitingInternships-main-content {
+      padding: 20px 15px;
+    }
+  
+    .MoreRecruitingInternships-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 15px;
+    }
+  
+    .MoreRecruitingInternships-header-title {
+      font-size: 20px;
+      text-align: left;
+    }
+  
+    .MoreRecruitingInternships-job-details {
+      padding: 20px;
+      max-height: 60vh;
+    }
+  
+    .MoreRecruitingInternships-job-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .MoreRecruitingInternships-apply-button {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    .MoreRecruitingInternships-job-description,
+    .MoreRecruitingInternships-job-feature,
+    .MoreRecruitingInternships-job-additional {
+      padding: 15px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .MoreRecruitingInternships-main-content {
+      padding: 15px 10px;
+    }
+  
+    .MoreRecruitingInternships-header-title {
+      font-size: 18px;
+    }
+  
+    .MoreRecruitingInternships-job-title {
+      font-size: 20px;
+    }
+  
+    .MoreRecruitingInternships-job-description h3,
+    .MoreRecruitingInternships-job-feature h3,
+    .MoreRecruitingInternships-job-additional h3 {
+      font-size: 16px;
+    }
+  
+    .MoreRecruitingInternships-job-description ul li,
+    .MoreRecruitingInternships-job-feature ul li,
+    .MoreRecruitingInternships-job-additional ul li {
+      font-size: 13px;
+    }
+  
+    .MoreRecruitingInternships-job-details {
+      max-height: 50vh;
+    }
+  }

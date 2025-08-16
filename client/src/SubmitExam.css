@@ -1,0 +1,300 @@
+/* โครงสร้างหลัก */
+.submitexam-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* Sidebar - เหมือน PersonnelInformation.css */
+.submitexam-sidebar {
+  width: 250px;
+  background-color: #E3F2FD !important;
+  color: #000000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.submitexam-logo {
+  height: 50px;
+  margin-bottom: 15px;
+  background: url("./assets/logo.png") no-repeat center center/contain;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitexam-sidebar-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.submitexam-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.submitexam-sidebar-menu li {
+  padding: 12px 0;
+}
+
+.submitexam-sidebar-link {
+  color: #000000 !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submitexam-sidebar-link:hover {
+  background-color: #E0E0E0 !important;
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.submitexam-sidebar-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000 !important;
+  margin: 15px 0 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.submitexam-logout-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #D3D3D3;
+}
+
+.submitexam-logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submitexam-logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Main Content */
+.submitexam-main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f7f8fa;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitexam-header {
+  background-color: transparent;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1000px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.submitexam-header-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Exam Schedule Box */
+.submitexam-exam-schedule-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Table Styling */
+.submitexam-exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  border: 1px solid #d1d5db;
+}
+
+.submitexam-exam-table th,
+.submitexam-exam-table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #2c3e50;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.submitexam-exam-table th {
+  background: #2c3e50; /* เปลี่ยนสีให้เข้มและเป็นทางการมากขึ้น */
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submitexam-exam-table td {
+  background: #ffffff;
+}
+
+.submitexam-exam-table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* Input Styling */
+.submitexam-exam-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #b0b7c0;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease-in-out;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.submitexam-date-input {
+  min-width: 150px; /* Ensure date picker has enough space */
+}
+
+.submitexam-time-input {
+  min-width: 120px; /* Ensure time picker has enough space */
+}
+
+.submitexam-exam-input:focus {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 3px rgba(255, 0, 0, 0.15);
+}
+
+/* Remove default placeholder since date/time inputs don't use it */
+.submitexam-exam-input::placeholder {
+  color: transparent; /* Hide placeholder for date/time inputs */
+}
+
+/* Optional: Customize the appearance of date/time picker dropdown arrow */
+.submitexam-exam-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 5px;
+  filter: invert(40%) sepia(50%) saturate(500%) hue-rotate(320deg); /* Subtle red tint */
+}
+
+.submitexam-exam-input::-webkit-datetime-edit {
+  color: #2c3e50;
+}
+
+/* Submit Button */
+.submitexam-submit-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submitexam-submit-button:hover {
+  background-color: #cc0000;
+}
+
+/* No Applicants Message */
+.submitexam-no-applicants {
+  font-size: 18px;
+  color: #2c3e50;
+  text-align: center;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .submitexam-sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .submitexam-main-content {
+    padding: 25px;
+  }
+
+  .submitexam-header {
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  .submitexam-header-title {
+    font-size: 26px;
+  }
+
+  .submitexam-exam-schedule-box {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .submitexam-exam-table th,
+  .submitexam-exam-table td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .submitexam-exam-input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .submitexam-submit-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .submitexam-no-applicants {
+    font-size: 16px;
+    padding: 20px;
+  }
+}

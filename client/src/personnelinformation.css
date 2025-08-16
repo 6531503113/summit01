@@ -1,0 +1,460 @@
+/* ----------------------------------------- */
+/* 🌟 โครงสร้างหลัก */
+/* ----------------------------------------- */
+.personnel-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f5f6fa 0%, #e9ecef 100%); /* เพิ่มพื้นหลัง gradient */
+}
+
+/* ----------------------------------------- */
+/* 📌 Sidebar (แถบเมนูด้านข้าง) */
+/* ----------------------------------------- */
+.personnel-sidebar {
+  position: fixed;
+  width: 250px;
+  background-color: #E3F2FD;
+  color: #000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.personnel-logo {
+  height: 50px;
+  margin-bottom: 15px;
+  background: url("./assets/logo.png") no-repeat center center/contain;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personnel-sidebar h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.personnel-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.personnel-sidebar ul li {
+  padding: 12px 0;
+}
+
+.personnel-sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.personnel-sidebar ul li a:hover {
+  background-color: #E0E0E0;
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.personnel-sidebar ul li a.active {
+  background-color: #34c759;
+  font-weight: 600;
+}
+
+.personnel-sidebar-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin: 15px 0 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+/* ----------------------------------------- */
+/* 🔐 ปุ่ม Logout */
+/* ----------------------------------------- */
+.personnel-logout-container {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #D3D3D3;
+}
+
+.personnel-logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.personnel-logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* ----------------------------------------- */
+/* 📄 Main Content (เนื้อหาหลัก) */
+/* ----------------------------------------- */
+.personnel-main-content {
+  margin-left: 250px; /* ป้องกันทับ sidebar ที่ fixed */
+  flex: 1;
+  padding: 30px; /* เพิ่ม padding เพื่อความโปร่ง */
+  background-color: transparent; /* ให้ใช้พื้นหลังจาก container */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* เพิ่มระยะห่างระหว่างส่วนต่างๆ */
+}
+
+/* ----------------------------------------- */
+/* 📌 Header */
+/* ----------------------------------------- */
+.personnel-header {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px; /* มุมโค้งมน */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* เงาอ่อนๆ */
+}
+
+.personnel-header-title {
+  font-size: 36px; /* เพิ่มขนาดตัวอักษร */
+  font-weight: 700;
+  color: #1a3c34; /* สีเข้มขึ้นเพื่อความโดดเด่น */
+  margin: 0;
+  letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
+}
+
+/* ----------------------------------------- */
+/* 🔍 Search Bar */
+/* ----------------------------------------- */
+.personnel-header-search {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* เพิ่ม gap เพื่อความสมดุล */
+  margin-bottom: 30px;
+  background: #ffffffb1;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.personnel-header-search:hover {
+  transform: translateY(-2px); /* Hover effect */
+}
+
+.personnel-search-input {
+  flex: 1;
+  padding: 14px 25px; /* เพิ่ม padding เพื่อความสะดวก */
+  border: 2px solid #e0e0e0; /* กรอบสีอ่อน */
+  border-radius: 25px; /* มุมโค้งมนมากขึ้น */
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #f9f9f9; /* พื้นหลังสีอ่อน */
+}
+
+.personnel-search-input:focus {
+  border-color: #ff4d4d; /* สีแดงอ่อนเมื่อ focus */
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.2); /* เงาแดงอ่อน */
+}
+
+.personnel-add-button {
+  background: #ff0000; /* Gradient สีแดง */
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
+}
+
+.personnel-add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 77, 77, 0.4);
+}
+
+/* ----------------------------------------- */
+/* 📋 Personnel List - Updated to Support Categories */
+/* ----------------------------------------- */
+.personnel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjusted to match the screenshot */
+}
+
+.personnel-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personnel-category-header {
+  font-size: 18px; /* Match the font size in the screenshot */
+  font-weight: 700; /* Bold to match the screenshot */
+  color: #000;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0; /* Subtle divider to match the screenshot */
+}
+
+.personnel-category-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 500px)); /* 2-column grid to match the screenshot */
+  gap: 20px; /* Match the existing gap */
+  justify-content: center;
+}
+
+.personnel-item {
+  background: linear-gradient(135deg, #e0e0e0 0%, #d9d9d9 100%); /* Gradient อ่อนๆ */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  max-width: 500px;
+  width: 100%;
+  color: #2c3e50; /* สีข้อความเข้มขึ้น */
+  font-weight: 500;
+}
+
+.personnel-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f0f0f0 0%, #e6e6e6 100%); /* Gradient เมื่อ hover */
+}
+
+.personnel-no-personnel {
+  font-size: 18px;
+  color: #7f8c8d; /* สีเทาอ่อน */
+  text-align: center;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------------------- */
+/* 📄 ส่วนที่ไม่ได้ใช้ในหน้า Personnel Information แต่คงไว้ */
+/* ----------------------------------------- */
+.personnel-categories {
+  margin-bottom: 20px;
+}
+
+.personnel-category-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.personnel-category-tab {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.personnel-category-tab.active {
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  color: #ffffff;
+}
+
+.personnel-category-tab:hover {
+  background: #ffe6e6;
+  border-color: #ff6666;
+}
+
+.personnel-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.personnel-job-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.personnel-job-item {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.personnel-job-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.personnel-job-item h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.personnel-job-details {
+  margin-bottom: 15px;
+}
+
+.personnel-job-details p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.personnel-job-details strong {
+  color: #2c3e50;
+}
+
+.personnel-job-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.personnel-edit-button {
+  background: linear-gradient(90deg, #ff4d4d 0%, #ff6666 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.personnel-edit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.4);
+}
+
+.personnel-delete-button {
+  background: linear-gradient(90deg, #e74c3c 0%, #ff6666 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.personnel-delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* ----------------------------------------- */
+/* 📱 Responsive Design */
+/* ----------------------------------------- */
+@media (max-width: 1200px) {
+  .personnel-job-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .personnel-category-items {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .personnel-main-content {
+    margin-left: 180px;
+    padding: 20px;
+  }
+
+  .personnel-header {
+    padding: 15px;
+  }
+
+  .personnel-header-title {
+    font-size: 28px;
+  }
+
+  .personnel-header-search {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .personnel-search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .personnel-add-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .personnel-category-items {
+    grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ในหน้าจอเล็ก */
+    gap: 15px;
+  }
+
+  .personnel-item {
+    padding: 12px;
+    font-size: 16px;
+    max-width: 100%; /* ขยายเต็มในหน้าจอเล็ก */
+  }
+
+  .personnel-job-list {
+    grid-template-columns: 1fr;
+  }
+}
