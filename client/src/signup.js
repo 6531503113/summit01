@@ -87,26 +87,32 @@ function Signup() {
                         </div>
                     </div>
 
-                    {/* Phone Number */}
-                    <label>Phone Number</label>
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Enter Phone Number"
-                        onChange={handleInput}
-                        className="input-field"
-                    />
-                    {errors.phone && <span className="error-text">{errors.phone}</span>}
+<div className="input-group">
+    <div className="input-container">
+        <label>Phone Number</label>
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Enter Phone Number"
+            onChange={handleInput}
+            className="input-field"
+        />
+        {errors.phone && <span className="error-text">{errors.phone}</span>}
+    </div>
 
-                    <label>national_id</label>
-                    <input
-                        type="national_id"
-                        name="national_id"
-                        placeholder="Enter national_id Number"
-                        onChange={handleInput}
-                        className="input-field"
-                    />
-                    {errors.national_id && <span className="error-text">{errors.national_id}</span>}
+    <div className="input-containers">
+        <label>National ID</label>
+        <input
+            type="text"
+            name="national_id"
+            placeholder="Enter National ID"
+            onChange={handleInput}
+            className="input-field"
+        />
+        {errors.national_id && <span className="error-text">{errors.national_id}</span>}
+    </div>
+</div>
+
 
                     {/* Email Address และส่วนล่าง */}
                     <div className={`email-section ${errors.phone ? 'with-phone-error' : ''}`}>
