@@ -25,12 +25,12 @@
 }
 
 .logo {
-    background: url('./assets/logo.png')no-repeat center center/contain;
+    background: url('./assets/logo.png') no-repeat center center/contain;
     width: 200px;
     height: 200px;
     position: absolute;
-    top: 20px;  
-    left: 20px; 
+    top: 20px;
+    left: 20px;
     margin: 0;
     z-index: 2;
 }
@@ -47,42 +47,42 @@
 
 .password-container {
     display: flex;
-    gap: 1rem; 
+    gap: 1rem;
     width: 100%;
 }
 
 .password-field {
-    flex: 1; 
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .name-container {
     display: flex;
-    gap: 1rem; 
+    gap: 1rem;
     width: 100%;
 }
 
 .name-field {
-    flex: 1; 
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .signup-form h2 {
     color: #253D90;
-    margin-left: 50px; 
-    text-align: center; 
-    font-size: 2.5rem; 
-    margin-bottom: 0.5rem; 
+    margin-left: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .signup-form p {
     color: #7F8C8D;
-    margin-left: 53px;  
-    text-align: center; 
-    font-size: 1rem; 
-    margin-bottom: 1.5rem; 
+    margin-left: 53px;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* สไตล์ช่องกรอกข้อมูล */
@@ -99,6 +99,7 @@
 .error-text {
     color: red;
     font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 /* ส่วนของ Email และส่วนล่าง */
@@ -129,8 +130,38 @@
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .signin-btn:hover {
     background: #16243d;
+    transform: scale(1.05); /* เพิ่มขนาดเล็กน้อยเมื่อ hover */
+}
+
+
+.input-group {
+    display: flex; 
+    gap: 20px;  /* เพิ่มระยะห่างระหว่างฟิลด์ */
+    margin-bottom: 20px;  /* ระยะห่างด้านล่าง */
+}
+
+.input-container {
+    width: 48%;  /* ฟิลด์แต่ละฟิลด์จะมีความกว้าง 48% */
+}
+.input-containers {
+    width: 48%;
+}
+
+.input-field {
+    width: 100%;  /* ให้ input ใช้ความกว้างทั้งหมดภายใน container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
 }
